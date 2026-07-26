@@ -144,16 +144,16 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="SSD_config.h">
+    <Compile Include="MD_config.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="SSD_interface.h">
+    <Compile Include="MD_interface.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="SSD_private.h">
+    <Compile Include="MD_private .h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="SSD_program.c">
+    <Compile Include="MD_program.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="STD_TYPES.h">

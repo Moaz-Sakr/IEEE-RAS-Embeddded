@@ -39,7 +39,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../DIO_program.c \
 ../main.c \
-../SSD_program.c
+../MD_program.c
 
 
 PREPROCESSING_SRCS += 
@@ -51,22 +51,22 @@ ASM_SRCS +=
 OBJS +=  \
 DIO_program.o \
 main.o \
-SSD_program.o
+MD_program.o
 
 OBJS_AS_ARGS +=  \
 DIO_program.o \
 main.o \
-SSD_program.o
+MD_program.o
 
 C_DEPS +=  \
 DIO_program.d \
 main.d \
-SSD_program.d
+MD_program.d
 
 C_DEPS_AS_ARGS +=  \
 DIO_program.d \
 main.d \
-SSD_program.d
+MD_program.d
 
 OUTPUT_FILE_PATH +=GccApplication1.elf
 
@@ -96,7 +96,7 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-./SSD_program.o: .././SSD_program.c
+./MD_program.o: .././MD_program.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
